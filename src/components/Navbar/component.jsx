@@ -42,7 +42,7 @@ const Component = (props) => {
             Login
           </Button>
           <Button color="inherit" onClick={() => props.history.push('/about')}>
-            About
+            Todo Apps
           </Button>
         </Toolbar>
       </AppBar>

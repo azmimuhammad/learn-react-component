@@ -51,11 +51,20 @@ class AboutPage extends React.Component {
     let newData = [...list]
     newData[index] = { ...newData[index], isFinish: true }
 
-    // this.setState({ listData: newData })
     window.localStorage.setItem('list', JSON.stringify(newData))
     this.getData()
-    console.log('newData', newData)
-    console.log('listData', this.state.listData)
+  }
+  delete(val) {
+    let list = this.state.listData
+    let index = list.findIndex((element) => element.name === val)
+
+    let newData = [...list]
+    newData.splice(index, 1)
+
+    window.localStorage.setItem('list', JSON.stringify(newData))
+    this.getData()
+
+    console.log(newData)
   }
   render() {
     return (
@@ -115,7 +124,17 @@ class AboutPage extends React.Component {
                             Done
                           </Button>
                         )}
+                        <Button
+                          variant="contained"
+                          size="small"
+                          color="secondary"
+                          className="ml-1"
+                          onClick={this.delete.bind(this, val.name)}
+                        >
+                          Delete
+                        </Button>
                       </TableCell>
+                      <TableCell></TableCell>
                     </TableRow>
                   ))}
               </TableBody>
