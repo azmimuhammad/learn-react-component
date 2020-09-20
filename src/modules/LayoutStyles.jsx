@@ -7,6 +7,9 @@ const GlobalStyled = styled.div`
   .ml-1 {
     margin-left: 10px;
   }
+  .mt-1 {
+    margin-top: 10px;
+  }
 `
 
 export { GlobalStyled }
