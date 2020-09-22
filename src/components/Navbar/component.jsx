@@ -41,6 +41,12 @@ const Component = (props) => {
           <Button color="inherit" onClick={() => props.history.push('/')}>
             Login
           </Button>
+          <Button
+            color="inherit"
+            onClick={() => props.history.push('/counter')}
+          >
+            Counter
+          </Button>
           <Button color="inherit" onClick={() => props.history.push('/about')}>
             Todo Apps
           </Button>

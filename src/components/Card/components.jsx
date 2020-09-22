@@ -6,8 +6,6 @@ import { withRouter } from 'react-router-dom'
 class CardComponent extends React.Component {
   handleClick(id, url) {
     const _url = `${url}${id}`
-    console.log('val', _url)
-    // console.log('url', url)
     this.props.history.push(_url)
   }
   render() {
